@@ -1,0 +1,188 @@
+.header {
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	padding-top: 40px;
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 50px;
+	}
+	&__logo {
+	}
+}
+
+.menu {
+	display: flex;
+	min-height: 50px;
+	&__icon {
+	}
+
+	&__body {
+		display: flex;
+	}
+
+	&__list {
+		display: flex;
+		width: 613px;
+		align-items: center;
+		justify-content: space-between;
+		margin-left: 10px;
+		li:last-child {
+			padding-right: 20px;
+		}
+	}
+
+	&__link {
+		color: #ffff;
+		letter-spacing: 0.75px;
+		text-transform: uppercase;
+		transition: all 0.4s ease-out;
+		
+	}
+}
+@media (min-width: 768px) {
+	.menu__link:hover {
+		color: #ffd703;
+		text-decoration: underline;
+		font-size: 15px;
+	}
+}
+.account {
+	display: flex;
+	flex: 0 0 266px;
+	align-items: center;
+	margin-left: 16px;
+	justify-content: space-between;
+	&__login {
+		text-transform: uppercase;
+		color: #ffff;
+		margin: 0 24px;
+		transition: all 0.3s ease-out;
+		&:hover {
+			color: #ffd703;
+			transform: translate(0, -2px);
+		}
+	}
+}
+
+@media (max-width: 1030px) {
+	.header {
+		padding-top: 20px;
+		&__row {
+			flex-direction: column;
+		}
+		&__logo {
+			margin-bottom: 10px;
+		}
+	}
+	.menu {
+		&__body {
+			width: 750px;
+		}
+		&__list {
+			justify-content: space-between;
+			li:last-child {
+				padding-right: 20px;
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.header {
+		&__row {
+			flex-direction: row;
+			position: relative;
+		}
+	}
+	.menu {
+		&__body {
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			background-color: rgb(34, 193, 195);
+			background-image: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(30, 135, 139, 1) 100%);
+			top: 0;
+			left: 0;
+			overflow: auto;
+			padding: 70px 0px 0px 0px;
+			transform: translate(0px, -100%);
+			transition: all 0.4s ease-in-out;
+			&.active {
+				transform: translate(0);
+			}
+		}
+
+		&__list {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			padding: 0 0 0 50px;
+			li {
+				margin-bottom: 25px;
+				font-size: 18px;
+			}
+		}
+		.account {
+			flex-direction: column;
+			flex: 0 0 auto;
+			margin: 0 auto;
+			padding-bottom: 30px;
+			&__login {
+				margin: 20px auto;
+				font-size: 16px;
+			}
+		}
+	}
+	.menu-icon {
+		display: block;
+		position: absolute;
+		width: 30px;
+		height: 20px;
+		top: 30%;
+		right: 20px;
+		z-index: 2;
+	}
+	.menu-icon span {
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		top: 9px;
+		transition: all 0.3s ease 0s;
+	}
+	.menu-icon::before,
+	.menu-icon::after {
+		content: "";
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+	.menu-icon::before {
+		top: 0;
+	}
+	.menu-icon::after {
+		bottom: 0;
+	}
+	.menu-icon.active span {
+		transform: scale(0);
+	}
+	.menu-icon.active::before {
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	.menu-icon.active::after {
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+	.lock {
+		overflow: hidden;
+	}
+}

@@ -1,0 +1,42 @@
+.slider {
+	padding: 32px 0 21px 0;
+	overflow: visible;
+	&__wrapper {
+		padding: 18px 0;
+	}
+
+	&__item {
+		width: auto;
+		img {
+			border-radius: 20.317px;
+		}
+	}
+}
+.swiper-container-horizontal>.swiper-scrollbar {
+position: absolute;
+left: 50%;
+transform: translate(-50%, 0);
+bottom: 0px;
+z-index: 50;
+height: 8px;
+max-width: 1504px;
+}
+
+.swiper-scrollbar {
+	background-color: #F9FCFF;
+	border-radius: 4px;
+}
+.swiper-scrollbar-drag {
+	top: 1px;
+	background-color: #FFD703;
+	border-radius: 4px;
+	height: 6px;
+	cursor: pointer;
+}
+
+.swiper-container {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
