@@ -145,7 +145,7 @@ body {
 		font-weight: 500;
 		font-size: 24px;
 		line-height: 36px;
-		color: #fff;
+		color: #CEFFFD;
 		mix-blend-mode: normal;
 		padding: 24px 0 72px 0;
 		width: 45%;
@@ -203,7 +203,7 @@ body {
 			display: flex;
 			flex: 0 1 480px;
 			flex-direction: column;
-			background: rgba(255, 255, 255, 0.7);
+			background: rgba(255, 255, 255, 0.4);
 			mix-blend-mode: normal;
 			backdrop-filter: blur(24px);
 			border-radius: 16px;
@@ -225,7 +225,7 @@ body {
 			font-size: 16px;
 			line-height: 24px;
 			letter-spacing: 0.1px;
-			color: #cefffd;
+			color: #f4f4f4;
 		}
 	}
 }
