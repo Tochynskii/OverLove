@@ -1,7 +1,7 @@
 .header {
 	position: absolute;
-	z-index: 100;
 	width: 100%;
+	z-index: 10;
 	margin-top: 40px;
 	&__row {
 		display: flex;
@@ -76,7 +76,6 @@
 		margin-top: 20px;
 		&__row {
 			flex-direction: column;
-			
 		}
 	}
 }
@@ -98,7 +97,7 @@
 			background-image: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(30, 135, 139, 1) 100%);
 			top: 0;
 			left: 0;
-			overflow: auto;
+			overflow: hidden;
 			padding: 100px 0px 0px 0px;
 			transform: translate(0px, -100%);
 			transition: all 0.3s ease 0s;
@@ -177,7 +176,7 @@
 		transform: rotate(-45deg);
 		bottom: 9px;
 	}
-	.lock {
-		overflow: hidden;
-	}
+}
+.lock {
+	overflow: hidden;
 }
