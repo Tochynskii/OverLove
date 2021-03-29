@@ -102,7 +102,7 @@
 			background-image: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(30, 135, 139, 1) 100%);
 			top: 0;
 			left: 0;
-			overflow: auto;
+			// overflow-x: auto;
 			padding: 70px 0px 0px 0px;
 			transform: translate(0px, -100%);
 			transition: all 0.4s ease-in-out;
@@ -137,9 +137,10 @@
 		position: absolute;
 		width: 30px;
 		height: 20px;
-		top: 30%;
+		top: 7px;
 		right: 20px;
 		z-index: 2;
+		cursor: pointer;
 	}
 	.menu-icon span {
 		background-color: #fff;

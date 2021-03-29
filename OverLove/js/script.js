@@ -77,8 +77,21 @@ new Swiper('.slider', {
 		pageUpDown: true
 	},
 	slidesPerView: 'auto',
+	centerMode: true,
 	spaceBetween: 40,
 	freeMode: true,
+
+	breakpoints: {
+		767: {
+			spaceBetween: 40,
+		},
+		500: {
+			spaceBetween: 20,
+		},
+		320: {
+			spaceBetween: 15,
+		}
+	}
 });
 
 new Swiper('.carusel-slider', {
