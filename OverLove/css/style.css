@@ -4,9 +4,9 @@
 
 .header {
   position: absolute;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
-  padding-top: 40px;
+  margin-top: 40px;
 }
 
 .header__row {
@@ -20,6 +20,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 50px;
+}
+
+.header__logo {
+  z-index: 100;
 }
 
 .menu {
@@ -558,7 +562,7 @@ body_lock {
   background-color: #ffd703;
   height: 48px;
   border-radius: 1000px;
-  padding: 0 40px;
+  padding: 0 45px;
 }
 
 .button a {
@@ -1381,7 +1385,7 @@ body_lock {
 
 @media (max-width: 1030px) {
   .header {
-    padding-top: 20px;
+    margin-top: 20px;
   }
 
   .header__row {
@@ -1389,10 +1393,6 @@ body_lock {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .header__logo {
-    margin-bottom: 10px;
   }
 }
 
@@ -1585,13 +1585,13 @@ body_lock {
     top: 0;
     left: 0;
     overflow: auto;
-    padding: 70px 0px 0px 0px;
-    -webkit-transform: translate(0px, -300%);
-        -ms-transform: translate(0px, -300%);
-            transform: translate(0px, -300%);
-    -webkit-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    padding: 100px 0px 0px 0px;
+    -webkit-transform: translate(0px, -100%);
+        -ms-transform: translate(0px, -100%);
+            transform: translate(0px, -100%);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
   }
 
   .menu__body.active {
@@ -1611,7 +1611,7 @@ body_lock {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    padding: 0 0 0 50px;
+    padding: 0 0 0 30px;
     max-width: 300px;
     width: 100%;
   }
@@ -1643,7 +1643,10 @@ body_lock {
     position: absolute;
     width: 30px;
     height: 20px;
-    top: 7px;
+    top: 50%;
+    -webkit-transform: translate(0%, -50%);
+        -ms-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
     right: 20px;
     z-index: 2;
     cursor: pointer;

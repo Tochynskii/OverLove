@@ -1,13 +1,16 @@
 .header {
 	position: absolute;
-	z-index: 10;
+	z-index: 100;
 	width: 100%;
-	padding-top: 40px;
+	margin-top: 40px;
 	&__row {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		min-height: 50px;
+	}
+	&__logo {
+		z-index: 100;
 	}
 }
 
@@ -70,12 +73,10 @@
 
 @media (max-width: 1030px) {
 	.header {
-		padding-top: 20px;
+		margin-top: 20px;
 		&__row {
 			flex-direction: column;
-		}
-		&__logo {
-			margin-bottom: 10px;
+			
 		}
 	}
 }
@@ -98,9 +99,9 @@
 			top: 0;
 			left: 0;
 			overflow: auto;
-			padding: 70px 0px 0px 0px;
-			transform: translate(0px, -300%);
-			transition: all 0.4s ease-in-out;
+			padding: 100px 0px 0px 0px;
+			transform: translate(0px, -100%);
+			transition: all 0.3s ease 0s;
 			&.active {
 				transform: translate(0);
 			}
@@ -110,7 +111,7 @@
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: flex-start;
-			padding: 0 0 0 50px;
+			padding: 0 0 0 30px;
 			max-width: 300px;
 			width: 100%;
 			li {
@@ -134,7 +135,8 @@
 		position: absolute;
 		width: 30px;
 		height: 20px;
-		top: 7px;
+		top: 50%;
+		transform: translate(0%, -50%);
 		right: 20px;
 		z-index: 2;
 		cursor: pointer;

@@ -61,7 +61,7 @@ for (i = 0; i < burgerLinks.length; i++) {
 // SWIPER SLIDER //
 new Swiper('.slider', {
 	autoplay: {
-		delay: 2000,
+		delay: 3000,
 		stopOnLastSlide: false,
 		disableOnInteraction: false
 	},
@@ -77,18 +77,20 @@ new Swiper('.slider', {
 		pageUpDown: true
 	},
 	slidesPerView: 'auto',
-	centerMode: true,
 	spaceBetween: 40,
-	freeMode: true,
+	
 
 	breakpoints: {
 		767: {
+			freeMode: true,
 			spaceBetween: 40,
 		},
 		500: {
 			spaceBetween: 20,
 		},
 		320: {
+			freeMode: false,
+			slidesPerView: 1,
 			spaceBetween: 15,
 		}
 	}
