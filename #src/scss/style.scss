@@ -21,9 +21,11 @@ body {
 	scroll-behavior: smooth;
 	text-rendering: optimizeSpeed;
 	font-family: "Poppins";
-	&_lock {
-		overflow: hidden;
-	}
+}
+.overflow {
+	-webkit-overflow: hidden;
+	-moz-overflow: hidden;
+	overflow: hidden;
 }
 // Загальні параметри>======================================================================
 
@@ -80,7 +82,7 @@ body {
 	min-width: 166px;
 	min-height: 48px;
 	border: 2px solid #ffd703;
-	padding: 0 40px;
+	padding: 0 41px;
 	border-radius: 100px;
 	background-color: transparent;
 	transition: all 0.4s ease-out;

@@ -37,25 +37,19 @@ if (isMobile.any()) {
 // VALIDATION MOBILE //
 
 // MENU BURGER //
-const header = document.querySelector(".header")
-
-let burgerIcon = document.querySelector(".menu-icon");
-let burgerBody = document.querySelector(".menu__body");
-let burgerLinks = document.querySelectorAll(".menu__link");
-
-burgerIcon.addEventListener("click", function () {
-	burgerIcon.classList.toggle("active");
-	burgerBody.classList.toggle("active");
-	document.body.classList.toggle("lock");
+document.querySelector(".menu-icon").addEventListener("click", function () {
+	document.querySelector(".menu-icon").classList.toggle("active");
+	document.querySelector(".header").classList.toggle("header__bg");
+	document.querySelector(".menu__body").classList.toggle("active");
+	document.getElementById('overflow').classList.toggle("overflow");
 })
-
-for (i = 0; i < burgerLinks.length; i++) {
-	burgerLinks[i].addEventListener("click", function () {
-		burgerIcon.classList.remove("active");
-		burgerBody.classList.remove("active");
-		document.body.classList.remove("lock");
-	})
-}
+// for (i = 0; i < burgerLinks.length; i++) {
+// 	burgerLinks[i].addEventListener("click", function () {
+// 		burgerIcon.classList.remove("active");
+// 		burgerBody.classList.remove("active");
+// 		document.getElementById('overflow').classList.remove("overflow");
+// 	})
+// }
 // MENU BURGER //
 
 // SWIPER SLIDER //

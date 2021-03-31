@@ -6,7 +6,8 @@
   position: absolute;
   width: 100%;
   z-index: 10;
-  margin-top: 40px;
+  top: 40px;
+  left: 0;
 }
 
 .header__row {
@@ -19,11 +20,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 50px;
+  height: 50px;
 }
 
 .header__logo {
-  z-index: 100;
+  z-index: 10;
 }
 
 .menu {
@@ -36,7 +37,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 50px;
+  height: 50px;
   max-width: 905px;
   width: 100%;
 }
@@ -108,13 +109,9 @@
           transform: translate(0, -2px);
 }
 
-.lock {
-  overflow: hidden;
-}
-
 .footer {
   padding: 40px 0;
-  background: #0b514d;
+  background-color: #0b514d;
 }
 
 .footer__top {
@@ -529,8 +526,9 @@ body {
   font-family: "Poppins";
 }
 
-html_lock,
-body_lock {
+.overflow {
+  -webkit-overflow: hidden;
+  -moz-overflow: hidden;
   overflow: hidden;
 }
 
@@ -594,7 +592,7 @@ body_lock {
   min-width: 166px;
   min-height: 48px;
   border: 2px solid #ffd703;
-  padding: 0 40px;
+  padding: 0 41px;
   border-radius: 100px;
   background-color: transparent;
   -webkit-transition: all 0.4s ease-out;
@@ -1379,17 +1377,9 @@ body_lock {
   width: 122px;
 }
 
-@media (min-width: 768px) {
-  .menu__link:hover {
-    color: #ffd703;
-    text-decoration: underline;
-    font-size: 15px;
-  }
-}
-
 @media (max-width: 1030px) {
   .header {
-    margin-top: 20px;
+    top: 20px;
   }
 
   .header__row {
@@ -1563,6 +1553,17 @@ body_lock {
 }
 
 @media (max-width: 768px) {
+  .header__bg::after {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    background: #0b514d;
+    z-index: 2;
+  }
+
   .header__row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1588,11 +1589,12 @@ body_lock {
     background-image: linear-gradient(0deg, #22c1c3 0%, #1e878b 100%);
     top: 0;
     left: 0;
-    overflow: hidden;
-    padding: 100px 0px 0px 0px;
-    -webkit-transform: translate(0px, -100%);
-        -ms-transform: translate(0px, -100%);
-            transform: translate(0px, -100%);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 120px 20px 20px 20px;
+    -webkit-transform: translate(0px, -110%);
+        -ms-transform: translate(0px, -110%);
+            transform: translate(0px, -110%);
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -1602,6 +1604,11 @@ body_lock {
     -webkit-transform: translate(0);
         -ms-transform: translate(0);
             transform: translate(0);
+  }
+
+  .menu__link:hover {
+    color: #ffd703;
+    text-decoration: underline;
   }
 
   .menu__list {
@@ -1618,11 +1625,12 @@ body_lock {
     padding: 0 0 0 30px;
     max-width: 300px;
     width: 100%;
+    margin: 0;
   }
 
   .menu__list li {
     margin-bottom: 25px;
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .menu .account {
@@ -1652,7 +1660,7 @@ body_lock {
         -ms-transform: translate(0%, -50%);
             transform: translate(0%, -50%);
     right: 20px;
-    z-index: 2;
+    z-index: 100;
     cursor: pointer;
   }
 
