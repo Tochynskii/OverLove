@@ -175,12 +175,25 @@
   display: none;
 }
 
+.footer__sub-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .footer__sub-list li {
   margin: 8px 0;
 }
 
 .footer__sub-list li:first-child {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .footer__sub-link {
@@ -206,7 +219,7 @@ body._mobile .footer__links-wrapper {
 
 body._mobile .footer__arrow {
   display: block;
-  margin: 10px 0 0 8px;
+  margin: 3px 0 0 8px;
   width: 0;
   height: 0;
   border-bottom: 5px solid transparent;
@@ -231,10 +244,18 @@ body._mobile .footer__list > li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 80px;
+  min-height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
 }
 
-body._mobile .footer__list li._active .footer__sub-list {
+body._mobile .footer__link {
+  pointer-events: none;
+}
+
+body._mobile .footer__list ._active .footer__sub-list {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
@@ -245,9 +266,12 @@ body._mobile .footer__sub-list {
   background: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
-  -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   border-radius: 25px;
   padding: 10px;
   left: 140px;
@@ -255,6 +279,15 @@ body._mobile .footer__sub-list {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+body._mobile .footer__sub-list .close-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+body._mobile .footer .close {
+  display: none;
 }
 
 .newsletter {
@@ -2032,6 +2065,10 @@ body {
     margin: 20px auto;
   }
 
+  .footer {
+    padding: 20px 0;
+  }
+
   .footer__top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2078,7 +2115,7 @@ body {
   }
 
   .hero {
-    padding-bottom: 35px;
+    padding-bottom: 25px;
   }
 
   .hero__title {
@@ -2098,7 +2135,7 @@ body {
   }
 
   .testimonial {
-    padding: 35px 0;
+    padding: 20px 0;
   }
 
   .testimonial__wrapper {
@@ -2106,7 +2143,7 @@ body {
   }
 
   .section-slider {
-    padding: 35px 0;
+    padding: 20px 0;
   }
 
   .section-slider__bg {
@@ -2124,7 +2161,7 @@ body {
   }
 
   .features {
-    padding: 35px 0;
+    padding: 20px 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2157,11 +2194,17 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0;
+    margin: 20px 0;
+  }
+
+  .features .features-block:nth-child(2) {
+    margin: 20px 0;
   }
 
   .features .features-block__title {
     text-align: center;
     font-size: 39px;
+    line-height: 120%;
   }
 
   .features .features-block__text {
@@ -2169,7 +2212,7 @@ body {
   }
 
   .carusel {
-    padding: 35px 0;
+    padding: 20px 0;
   }
 
   .carusel .carusel-slider__image img {
@@ -2181,7 +2224,7 @@ body {
     position: static;
     left: 0;
     max-width: 550px;
-    padding: 10px 0;
+    padding: 10px 0 0 0;
     bottom: 0;
     margin: 0 auto;
   }
@@ -2228,11 +2271,15 @@ body {
   }
 
   .carusel .control-panel .swiper-pagination {
-    margin: 10px 0 20px 0;
+    margin: 20px 0 30px 0;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     max-width: 80px;
+  }
+
+  .team {
+    padding: 0px 0 20px 0;
   }
 
   .team__header-button {
@@ -2254,7 +2301,7 @@ body {
   }
 
   .download {
-    padding: 50px 0;
+    padding: 25px 0;
   }
 
   .download__title {
@@ -2276,14 +2323,14 @@ body {
     margin: 20px auto 0 auto;
   }
 
-  .newsletter__subscribe-block {
+  .footer .newsletter__subscribe-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 
-  .newsletter__button {
+  .footer .newsletter__button {
     margin: 20px auto 0 auto;
   }
 }

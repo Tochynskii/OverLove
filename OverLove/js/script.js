@@ -22,15 +22,19 @@ const isMobile = {
 if (isMobile.any()) {
 	document.body.classList.add('_mobile');
 
-	let footerArrows = document.querySelectorAll('.footer__arrow'); 
-	console.log(footerArrows);
-		for (let i = 0; i < footerArrows.length; i++) {
-			const footerArrow = footerArrows[i];
-			let subList = document.querySelectorAll('.footer__sub-list'); 
-			footerArrow.addEventListener("click", function (e) {
-				footerArrow.parentElement.classList.toggle('_active');
-			});
-		}
+	let footerNav = document.querySelectorAll('.footer__list > li');
+	footerNav.forEach(item => {
+		item.addEventListener("click", () => {
+			if (item.classList.contains('_active')) {
+				item.classList.remove('_active');
+			} else {
+				footerNav.forEach(item => {
+					item.classList.remove('_active');
+				});
+				item.classList.add('_active');
+			}
+		})
+	});
 } else {
 	document.body.classList.add('_PC');
 }
@@ -42,14 +46,7 @@ document.querySelector(".menu-icon").addEventListener("click", function () {
 	document.querySelector(".header").classList.toggle("header__bg");
 	document.querySelector(".menu__body").classList.toggle("active");
 	document.getElementById('overflow').classList.toggle("overflow");
-})
-// for (i = 0; i < burgerLinks.length; i++) {
-// 	burgerLinks[i].addEventListener("click", function () {
-// 		burgerIcon.classList.remove("active");
-// 		burgerBody.classList.remove("active");
-// 		document.getElementById('overflow').classList.remove("overflow");
-// 	})
-// }
+});
 // MENU BURGER //
 
 // SWIPER SLIDER //
@@ -72,7 +69,7 @@ new Swiper('.slider', {
 	},
 	slidesPerView: 'auto',
 	spaceBetween: 40,
-	
+
 
 	breakpoints: {
 		767: {
@@ -108,3 +105,4 @@ new Swiper('.carusel-slider', {
 });
 // SWIPER SLIDER //
 
+// Блимання кнопок // 
